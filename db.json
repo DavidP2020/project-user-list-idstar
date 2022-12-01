@@ -1,0 +1,95 @@
+{
+  "user": [
+    {
+      "id": 2159,
+      "name": "Mrs. Devika Malik",
+      "email": "malik_mrs_devika@hammes.co",
+      "gender": "female",
+      "status": "inactive"
+    },
+    {
+      "id": 2158,
+      "name": "Gorakhanatha Gandhi",
+      "email": "gorakhanatha_gandhi@towne.name",
+      "gender": "male",
+      "status": "active"
+    },
+    {
+      "id": 2157,
+      "name": "Prema Mehrotra",
+      "email": "mehrotra_prema@kreiger.io",
+      "gender": "female",
+      "status": "active"
+    },
+    {
+      "id": 2156,
+      "name": "Param Butt",
+      "email": "butt_param@thompson.biz",
+      "gender": "female",
+      "status": "active"
+    },
+    {
+      "id": 2155,
+      "name": "Maheswar Patel",
+      "email": "patel_maheswar@dare.net",
+      "gender": "male",
+      "status": "inactive"
+    },
+    {
+      "id": 2154,
+      "name": "Amrit Kaur",
+      "email": "amrit_kaur@bins.net",
+      "gender": "female",
+      "status": "active"
+    },
+    {
+      "id": 2153,
+      "name": "Paramartha Prajapat",
+      "email": "paramartha_prajapat@greenfelder.net",
+      "gender": "female",
+      "status": "inactive"
+    },
+    {
+      "id": 2127,
+      "name": "Rageshwari Pandey III",
+      "email": "iii_pandey_rageshwari@jones-raynor.io",
+      "gender": "female",
+      "status": "active"
+    },
+    {
+      "id": 2126,
+      "name": "Bhupen Banerjee",
+      "email": "banerjee_bhupen@kris.net",
+      "gender": "male",
+      "status": "inactive"
+    },
+    {
+      "id": 2125,
+      "name": "Dr. Aatmaja Bandopadhyay",
+      "emai": "aatmaja_dr_bandopadhyay@cummerata.info",
+      "gender": "male",
+      "status": "active"
+    },
+    {
+      "id": 2147,
+      "name": "Rageshwari Pandey III",
+      "email": "iii_pandey_rageshwari@jones-raynor.io",
+      "gender": "female",
+      "status": "active"
+    },
+    {
+      "id": 2166,
+      "name": "Bhupen Banerjee",
+      "email": "banerjee_bhupen@kris.net",
+      "gender": "male",
+      "status": "inactive"
+    },
+    {
+      "id": 2105,
+      "name": "Dr. Aatmaja Bandopadhyay",
+      "emai": "aatmaja_dr_bandopadhyay@cummerata.info",
+      "gender": "male",
+      "status": "active"
+    }
+  ]
+}
