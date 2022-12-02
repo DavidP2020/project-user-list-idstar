@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import Paper from "@mui/material/Paper";
 import Table from "@mui/material/Table";
-import { styled } from "@mui/material/styles";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
@@ -10,8 +9,11 @@ import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 import { useDispatch, useSelector } from "react-redux";
 import "./Home.css";
-import { loadUsers } from "../redux/actions";
-
+import { useNavigate } from "react-router-dom";
+import { deleteUsers, loadUsers } from "../redux/actions";
+import Button from "@mui/material/Button";
+import { ButtonGroup } from "@mui/material";
+import { Box, Stack } from "@mui/system";
 const columns = [
   {
     id: "id",
@@ -43,14 +45,17 @@ const columns = [
     minWidth: 170,
     align: "center",
   },
+  {
+    id: "action",
+    label: "Action",
+    minWidth: 170,
+    align: "center",
+  },
 ];
-
-function createData(id, name, email, gender, status) {
-  return { id, name, email, gender, status };
-}
 
 const Home = () => {
   const dispatch = useDispatch();
+  const history = useNavigate();
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
   const { users } = useSelector((state) => state.data);
@@ -68,12 +73,25 @@ const Home = () => {
     dispatch(loadUsers());
   }, []);
 
+  const handleDelete = (id) => {
+    if (window.confirm("Are you sure wanted to delete this user ?")) {
+      dispatch(deleteUsers(id));
+    }
+  };
   return (
     <>
-      <h1>Daftar Pengguna</h1>
-      <p>{process.env.REACT_APP_NOT_SECRET_CODE}</p>
+      <h2>Daftar Pengguna</h2>
+      <div className="button-action">
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => history("/addUser")}
+        >
+          Create User
+        </Button>
+      </div>
       <Paper sx={{ width: "100%", overflow: "hidden" }}>
-        <TableContainer sx={{ maxHeight: 440 }}>
+        <TableContainer sx={{ maxHeight: 540 }}>
           <Table stickyHeader aria-label="sticky table">
             <TableHead>
               <TableRow>
@@ -99,14 +117,54 @@ const Home = () => {
                       tabIndex={-1}
                       key={users.id}
                     >
-                      {columns.map((column) => {
-                        const value = users[column.id];
-                        return (
-                          <TableCell key={column.id} align={column.align}>
-                            {value}
-                          </TableCell>
-                        );
-                      })}
+                      <TableCell align="center">{users.id}</TableCell>
+                      <TableCell align="center">{users.name}</TableCell>
+                      <TableCell align="center">{users.email}</TableCell>
+                      <TableCell align="center">{users.gender}</TableCell>
+                      <TableCell align="center">{users.status}</TableCell>
+                      <TableCell align="center">
+                        <Box
+                          sx={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            "& > *": {
+                              m: 1,
+                            },
+                          }}
+                        >
+                          <ButtonGroup
+                            variant="text"
+                            aria-label="text button group"
+                          >
+                            <Stack spacing={1} direction="row">
+                              <Button
+                                variant="outlined"
+                                color="primary"
+                                onClick={() =>
+                                  history(`/detailUser/${users.id}`)
+                                }
+                              >
+                                Detail
+                              </Button>
+                              <Button
+                                variant="contained"
+                                color="primary"
+                                onClick={() => history(`/editUser/${users.id}`)}
+                              >
+                                Edit
+                              </Button>
+                              <Button
+                                variant="contained"
+                                color="secondary"
+                                onClick={() => handleDelete(users.id)}
+                              >
+                                Delete
+                              </Button>
+                            </Stack>
+                          </ButtonGroup>
+                        </Box>
+                      </TableCell>
                     </TableRow>
                   );
                 })}

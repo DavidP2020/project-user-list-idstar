@@ -1,4 +1,36 @@
 body {
-  background: black;
-  color: white;
+  background: rgb(230, 230, 230);
+}
+
+h2 {
+  text-align: left;
+  margin: 20px;
+}
+
+.button-action {
+  margin: 20px;
+  text-align: right;
+}
+
+.container {
+  background-color: rgb(255, 255, 255);
+  width: 500px;
+  height: 100%;
+}
+.a-center {
+  align-items: center;
+}
+.flex {
+  display: flex;
+  width: 100%;
+}
+.flex1 {
+  width: 100%;
+}
+.flex2 {
+  width: 15%;
+}
+.flex3 {
+  width: 10%;
+  text-align: right;
 }

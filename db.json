@@ -2,7 +2,7 @@
   "user": [
     {
       "id": 2159,
-      "name": "Mrs. Devika Malik",
+      "name": "Mrs. Devika Malik 123",
       "email": "malik_mrs_devika@hammes.co",
       "gender": "female",
       "status": "inactive"
@@ -11,7 +11,7 @@
       "id": 2158,
       "name": "Gorakhanatha Gandhi",
       "email": "gorakhanatha_gandhi@towne.name",
-      "gender": "male",
+      "gender": "female",
       "status": "active"
     },
     {
@@ -78,18 +78,38 @@
       "status": "active"
     },
     {
-      "id": 2166,
-      "name": "Bhupen Banerjee",
-      "email": "banerjee_bhupen@kris.net",
-      "gender": "male",
-      "status": "inactive"
+      "name": "Cici",
+      "email": "Cici@gmail.com",
+      "gender": "female",
+      "status": "inactive",
+      "id": 2167
     },
     {
-      "id": 2105,
-      "name": "Dr. Aatmaja Bandopadhyay",
-      "emai": "aatmaja_dr_bandopadhyay@cummerata.info",
+      "name": "El",
+      "email": "El@gmail.com",
+      "gender": "female",
+      "status": "active",
+      "id": 2168
+    },
+    {
+      "name": "Dav",
+      "email": "Dav@gmail.com",
       "gender": "male",
-      "status": "active"
+      "status": "inactive",
+      "id": 2169
+    }
+  ],
+  "post": [
+    {
+      "id": 1,
+      "title": "abcdefh",
+      "body": "abasdsaddsadsa"
+    },
+    {
+      "title": "abcdefg",
+      "body": "adsadsadsadsadsadadsa",
+      "name": "d",
+      "id": 2
     }
   ]
 }
